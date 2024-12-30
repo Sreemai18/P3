@@ -947,29 +947,6 @@ a:hover {
 
 
 
-/* Profile Section Styles */
-#profile {
-    padding: 20px; /* Adjust padding for mobile */
-    display: flex;
-    flex-direction: column; /* Stack elements */
-    align-items: center; /* Center items */
-}
-
-.profile-pic-container {
-    width: 80%; /* Use percentage for responsiveness */
-    max-width: 200px; /* Set a max width */
-    border-radius: 50%; /* Ensure it's circular */
-}
-
-.profile-content {
-    text-align: center; /* Center text */
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .name {
-        font-size: 2rem; /* Adjust font size for mobile */
-    }
 
     .bio {
         font-size: 1rem; /* Adjust font size for mobile */
