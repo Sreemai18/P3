@@ -1,4 +1,5 @@
 /* General Styles */
+/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -52,10 +53,56 @@ a:hover {
     text-decoration: underline;
     text-underline-offset: 1rem;
 }
-
-/* Hamburger Menu */
 #hamburger-nav {
-    display: none;
+  display: none;  /* Ensure it's hidden on larger screens */
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 20px;  /* Position to the right */
+  top: 15px;  /* Adjust to align vertically */
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  #hamburger-nav {
+      display: block;
+  }
+
+  .nav-links {
+      position: fixed;
+      right: 0;
+      top: 60px; /* Adjust according to your nav's height */
+      background-color: #fff;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      padding-top: 20px; /* Gives some space from the top of the screen */
+      height: calc(100vh - 60px); /* Full height minus the nav bar */
+      overflow-y: auto; /* Allows scrolling if many items */
+      z-index: 1500; /* Ensure it's above other content */
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 15px;  /* More clickable area */
+  }
+
+  .nav-links a {
+      font-size: 18px;  /* Larger font for touch targets */
+  }
 }
 
 /* Profile Section */
@@ -763,15 +810,6 @@ a:hover {
       height: 250px;
       margin: 0 auto 1rem;
   }
-
-  /* Navigation */
-  nav {
-      padding: 1rem;
-  }
-
-  .nav-links {
-      gap: 1rem;
-  }
 }
 
 /* Small mobile devices */
@@ -953,25 +991,25 @@ a:hover {
 
 
 nav {
-    position: fixed; /* Keep the nav fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px; /* Set a height for the nav */
-    background-color: #ffffff; /* Background color */
-    z-index: 1000; /* Ensure it stays above other content */
+  position: fixed; /* Keep the nav fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Set a height for the nav */
+  background-color: #ffffff; /* Background color */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 /* Add padding to the profile section */
 #profile {
-    padding: 100px 20px; /* Adjust the top padding to create space */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 100px 20px; /* Adjust the top padding to create space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
-    #profile {
-        padding-top: 80px; /* Adjust for mobile */
-    }
+  #profile {
+      padding-top: 80px; /* Adjust for mobile */
+  }
 }
 
 
